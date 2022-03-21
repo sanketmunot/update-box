@@ -1,0 +1,7 @@
+.updates{
+    border: 1px solid #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 1rem 0 rgb(224 54 222 / 84%);
+    overflow: auto;
+    @apply h-5/6 overflow-auto;
+}

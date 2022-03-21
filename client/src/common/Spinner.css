@@ -1,0 +1,58 @@
+
+.dot{
+    --size : 20px;
+    --border-color-1:rgb(3, 3, 3);
+    --border-color-2:yellow;
+    width: var(--size);
+    height: var(--size);
+    background-color: transparent;
+    border-radius: 50%;
+    @apply m-2;
+    animation: grow 2s infinite;
+    border: 2px solid var(--border-color-1);
+    box-shadow: 0 0 0 2px var(--border-color-2),
+                0 0 0 3px var(--border-color-1),
+                0 0 0 4px var(--border-color-2) ;
+}
+
+.spinner{
+    background-color: #ffffffa6;
+    box-shadow: 0 0 1rem white ;
+}
+
+@keyframes grow {
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.5);
+        --border-color-2:rgb(0, 255, 13);
+    }
+
+    100%{
+        transform: scale(1);
+        
+    }
+}
+
+
+.dot:nth-child(2n){
+    /* background-color: yellow; */
+    animation: shrink 2s infinite;
+}
+
+@keyframes shrink {
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(0.75);
+        --border-color-2:rgb(255, 0, 255);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}

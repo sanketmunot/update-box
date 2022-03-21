@@ -1,0 +1,4 @@
+export const UpdateActions = {
+  SET_RECENT_UPDATES: "SET_RECENT_UPDATES",
+  ADD_RECENT_UPDATE: "ADD_RECENT_UPDATE",
+};

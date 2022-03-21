@@ -1,0 +1,29 @@
+input,
+textarea,
+label {
+  @apply w-full  block;
+}
+
+input,
+textarea{
+    @apply bg-purple-100 p-2 rounded border-b-2 border-purple-400;
+}
+
+textarea{
+    resize: none;
+}
+
+.form {
+  border: 1px solid #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 1rem 0 rgba(103, 35, 167, 0.842);
+  @apply py-5 px-4;
+}
+
+.form__element{
+    @apply my-4;
+}
+
+.submit{
+    @apply font-semibold bg-green-300 p-3 rounded hover:bg-green-400;
+}
