@@ -3,8 +3,8 @@ var path = require("path");
 var logger = require("morgan");
 var cors = require("cors");
 const mongoose = require('mongoose')
+require('dotenv').config()
 
-var indexRouter = require("./routes/indexRouter");
 var updateRouter = require("./routes/updateRouter");
 var usersRouter = require("./routes/users");
 var app = express();
@@ -19,8 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 // app.use(express.static(path.join(__dirname, "public")));
 
-const DBURI =
-  "mongodb+srv://smunot:smunot@cluster0.8jny9.mongodb.net/update-box?retryWrites=true&w=majority";
+const DBURI = process.env.MONGO_DB_URI;
 mongoose
   .connect(DBURI)
   .then((result) => {
