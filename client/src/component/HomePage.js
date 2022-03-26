@@ -23,7 +23,7 @@ const HomePage = () => {
           <div className="main md:w-1/3">
             <UpdateForm />
           </div>
-          <div className="main md:w-1/2">
+          <div className="main md:w-1/2 mt-4 md:mt-0">
             <RecentUpdates />
           </div>
         </div>

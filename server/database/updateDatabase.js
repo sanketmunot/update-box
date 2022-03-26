@@ -1,7 +1,14 @@
 const Update = require("../models/updateModel");
 
-function findUpdateByDateEmail(date, email) {
-    
+async function findUpdateByDateEmail({updateDate, email}) {
+    try{
+        result = await Update.findOne({email,updateDate})
+        return result
+    }
+    catch(e){
+        console.log(e);
+        return false
+    }
 }
 
 async function findUpdateByEmail(email) {

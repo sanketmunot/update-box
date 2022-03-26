@@ -20,7 +20,7 @@ const RecentUpdates = () => {
 
 
   return (
-    <div className="updates sm:mt-4">
+    <div className="updates">
         {updates.map(({_id,updateName,updateDescription,updateDate})=>{
             return (
                 <UpdateBox 
